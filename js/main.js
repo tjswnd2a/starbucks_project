@@ -1,26 +1,3 @@
-const searchEl = document.querySelector('.search');
-const searchInputEl = searchEl.querySelector('input');
-
-// document는 html이란 뜻이다. -> DOCTYPE
-
-
-searchEl.addEventListener('click', function () {
-  //logic...
-  searchInputEl.focus();
-});
-
-searchInputEl.addEventListener('focus', function () {
-  searchEl.classList.add('focused');
-  // searchInputEl에다가 html 속성을 부여한다
-  searchInputEl.setAttribute('placeholder', '통합검색');
-});
-
-searchInputEl.addEventListener('blur', function () {
-  searchEl.classList.remove('focused');
-  // searchInputEl에다가 html 속성을 부여한다
-  searchInputEl.setAttribute('placeholder', '');
-});
-
 const badgeEl = document.querySelector('header .badges');
 
 // window -- 브라우저 창
