@@ -78,6 +78,20 @@ new Swiper('.promotion .swiper', {
     nextEl: 'promotion .swiper-next'
   }
 });
+new Swiper('.awards .swiper', {
+  direcition: 'horizontal',
+  autoplay: true,
+  loop: true,
+  spaceBetween: 30,
+  slidesPerView: 5,
+  navigation: {
+    prevEl: 'awards .swiper-prev',
+    nextEl: 'awards .swiper-next'
+  }
+});
+
+
+
 
 
 const promotionEl = document.querySelector('.promotion')
@@ -129,3 +143,6 @@ spyEls.forEach(function (spyEl) {
   .setClassToggle(spyEl, 'show')
   .addTo(new ScrollMagic.Controller());
 })
+
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear(); //2021
