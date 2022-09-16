@@ -51,10 +51,11 @@ new Swiper('.promotion .swiper', {
     clickable: true // 사용자가 페이지 번호 요소 제어
   },
   navigation: {
-    prevEl: 'promotion .swiper-prev',
-    nextEl: 'promotion .swiper-next'
+    prevEl: '.swiper-prev',
+    nextEl: '.swiper-next'
   }
 });
+
 new Swiper('.awards .swiper', {
   direcition: 'horizontal',
   autoplay: true,
@@ -62,8 +63,8 @@ new Swiper('.awards .swiper', {
   spaceBetween: 30,
   slidesPerView: 5,
   navigation: {
-    prevEl: 'awards .swiper-prev',
-    nextEl: 'awards .swiper-next'
+    prevEl: '.swiper-prev',
+    nextEl: '.swiper-next'
   }
 });
 
@@ -121,3 +122,9 @@ spyEls.forEach(function (spyEl) {
   .addTo(new ScrollMagic.Controller());
 })
 
+const topBtn = document.querySelector("#to-top");
+
+topBtn.addEventListener("click", function() {
+  console.log("aaa");
+  window.scrollTo({top: 0, left: 0, behavior:'smooth'}); // x좌표, y좌표
+})
